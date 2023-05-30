@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;1,200&display=swap');
+
+.material-icons {
+font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 24px;
+display: inline-block;
+line-height: 1;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+direction: ltr;
+
+/* Support for all WebKit browsers. */
+-webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+text-rendering: optimizeLegibility;
+
+/* Support for Firefox. */
+-moz-osx-font-smoothing: grayscale;
+
+/* Support for IE. */
+font-feature-settings: 'liga';
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+html{
+    font-size: 18px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: 'Nunito Sans', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(33,37,41,1);
+    margin: 0 auto;
+    /* 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+}
+li{list-style: none;}
+img{display: block; max-width: 100%;}
+span{display: block;}
+/* -- CSS RESET -- */
+
+:root{
+    --palette-color-lego-yellow: rgba(255, 213, 0, 1);
+    --palette-color-lego-red:rgba(237, 27, 36, 1);
+    --palette-color-lego-black:rgb(51, 51, 51);
+    --palette-color-lego-blue:rgb(0, 109, 183);
+    --palette-color-lego-green:rgba(0, 163, 38, 1);
+    --palette-color-lego-lightPink:rgba(255, 156,198, 1);
+    --palette-color-lego-lightPurple:rgba(186, 80, 157, 1);
+    --color-pink:deeppink;
+    --color-violet:blueviolet;
+    --color-blue:#264de4;
+    --color-orange:#dd4b25;
+}
+
+.main-content{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+    height: 500px;
+}
+.proj-preview{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--palette-color-lego-black);
+    flex: 1;
+    justify-content: space-between;
+}
+.proj-faces-minifigures{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 300px;
+    margin: 25px 10px;
+}
+.faces-minifigures--plug{
+    width: 150px;
+    height: 340px;
+    background-color: var(--palette-color-lego-yellow);
+    border-radius: 20px;
+    border: 8px solid rgba(255,255,255,0.25);
+    /* box-shadow: 0px 5px 3px rgb(140 140 140 / 50%); */
+}
+.faces-minifigures--head{
+    position: absolute;
+    width: 295px;
+    height: 250px;
+    background-color: var(--palette-color-lego-yellow);
+    border-radius: 23%;
+    border: 8px solid rgba(255,255,255,0.25);
+}
+.faces-minifigures--face{
+    width: 145px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.eyebrow{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 59px;
+}
+.eyebrow-L, .eyebrow-R{
+    width: 60px;
+    height: 28px;
+    border-top: 10px solid var(--palette-color-lego-black);
+}
+.eyebrow-L{
+    border-top-left-radius: 50%; 
+    border-top-right-radius: 5px; 
+    transform: rotate(10deg);
+}
+.eyebrow-R{
+    border-top-right-radius: 50%; 
+    border-top-left-radius: 5px; 
+    transform: rotate(-10deg);
+}
+.eye{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+.eye-L, .eye-R{
+    position: relative;
+    width: 59px;
+}
+#eye-L-iris, #eye-R-iris{
+    width: 35px; 
+    height: 35px;
+    background-color: var(--palette-color-lego-black);
+    border-radius: 50%;
+    margin: 0 auto;
+}
+#eye-L-iris::after,#eye-R-iris::after{
+    content: "";
+    position: absolute;
+    top:5px;
+    left: 40%;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.eye-mouth{
+    width: 118px;
+    height: 45px;
+    border-bottom: 10px solid var(--palette-color-lego-black);
+    border-radius: 45%; 
+}
+.list-flags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+    padding: 25px 10px;
+}
+.flag{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    margin: 0 16px 8px 0;
+    padding: 0 10px 0 20px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    font-size: 0.8em;
+    color: white;
+    /* border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; */
+}
+.flag::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    left: 4px;
+    -webkit-box-shadow: -1px -1px 2px rgba(0,0,0,0.4);
+    box-shadow: -1px -1px 2px rgba(0,0,0,0.4);
+}
+.flag::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 12px 12px 0;
+}
+.flag-cssArts::before{
+    border-color: transparent var(--color-pink) transparent transparent;
+}
+.flag-flexbox::before{
+    border-color: transparent var(--color-violet) transparent transparent;
+}
+.flag-css3::before{
+    border-color: transparent var(--color-blue) transparent transparent;
+}
+.flag-html5::before{
+    border-color: transparent var(--color-orange) transparent transparent;
+}
+.flag-cssArts{background-color: var(--color-pink);}
+.flag-flexbox{background-color: var(--color-violet);}
+.flag-css3{background-color: var(--color-blue);}
+.flag-html5{background-color: var(--color-orange);}
+.desc-proj{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-pink);
+    color: white;
+    font-size: 0.8em;
+    padding: 10px;
+}
